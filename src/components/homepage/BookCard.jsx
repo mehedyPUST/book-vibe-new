@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 const BookCard = ({ books }) => {
     console.log(books)
     return (
-        <div className='grid grid-cols-3 gap-5 '>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 '>
             {
                 books.map(book => {
                     return (
