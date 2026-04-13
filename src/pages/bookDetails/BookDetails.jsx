@@ -9,6 +9,11 @@ const BookDetails = () => {
     console.log(books, "hgdsdhgsga")
     const expectedBook = books.find(book => book.bookId == bookId);
     console.log(expectedBook)
+
+
+    const handleMarkasReead = (bookId) => {
+        console.log(bookId, "gddgd")
+    }
     const { yearOfPublishing, publisher, tags, category, rating, totalPages, review, image, author, bookName } = expectedBook;
     return (
         // <div className="card lg:card-side bg-base-100 shadow-sm container mx-auto">
@@ -49,10 +54,10 @@ const BookDetails = () => {
                             to={"/"}
                             className=" inline-flex items-center px-6 py-3 text-sm font-medium text-white bg-red-500 rounded-lg hover:bg-red-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2"
                         >
-                            ← Back to Home
+                            ←
                         </Link>
                         <div className='flex items-center gap-4'>
-                            <button className="btn btn-outline">Read</button>
+                            <button onClick={() => handleMarkasReead(bookId)} className="btn btn-outline">Mark as Read</button>
                             <button className="btn btn-primary">Wishlist</button>
                         </div>
                     </div>
